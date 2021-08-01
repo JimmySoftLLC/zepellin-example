@@ -1,0 +1,445 @@
+{
+  "paragraphs": [
+    {
+      "text": "%pyspark\nmytext \u003d \u0027Hello World\u0027\nprint(mytext)",
+      "user": "anonymous",
+      "dateUpdated": "2021-07-31 18:56:14.090",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Hello World\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1627757457733_2095673637",
+      "id": "paragraph_1627757457733_2095673637",
+      "dateCreated": "2021-07-31 18:50:57.733",
+      "dateStarted": "2021-07-31 18:56:14.110",
+      "dateFinished": "2021-07-31 18:56:14.345",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nimport pandas as pd\npd.read_csv(\u0027/opt/zeppelin/notebook/test1.csv\u0027)\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-07-31 18:56:14.410",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "HTML",
+            "data": "\u003cdiv\u003e\n\u003cstyle scoped\u003e\n    .dataframe tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align: right;\n    }\n\u003c/style\u003e\n\u003ctable border\u003d\"1\" class\u003d\"dataframe\"\u003e\n  \u003cthead\u003e\n    \u003ctr style\u003d\"text-align: right;\"\u003e\n      \u003cth\u003e\u003c/th\u003e\n      \u003cth\u003eName\u003c/th\u003e\n      \u003cth\u003eAge\u003c/th\u003e\n    \u003c/tr\u003e\n  \u003c/thead\u003e\n  \u003ctbody\u003e\n    \u003ctr\u003e\n      \u003cth\u003e0\u003c/th\u003e\n      \u003ctd\u003eSally\u003c/td\u003e\n      \u003ctd\u003e21\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth\u003e1\u003c/th\u003e\n      \u003ctd\u003eJoe\u003c/td\u003e\n      \u003ctd\u003e32\u003c/td\u003e\n    \u003c/tr\u003e\n    \u003ctr\u003e\n      \u003cth\u003e2\u003c/th\u003e\n      \u003ctd\u003eSnoopy\u003c/td\u003e\n      \u003ctd\u003e80\u003c/td\u003e\n    \u003c/tr\u003e\n  \u003c/tbody\u003e\n\u003c/table\u003e\n\u003c/div\u003e"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1627757478307_757607517",
+      "id": "paragraph_1627757478307_757607517",
+      "dateCreated": "2021-07-31 18:51:18.307",
+      "dateStarted": "2021-07-31 18:56:14.423",
+      "dateFinished": "2021-07-31 18:56:14.658",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nfrom pyspark.sql import SparkSession\nspark \u003d SparkSession.builder.appName(\"Python Spark SQL basic example\").getOrCreate()\ndf\u003dspark.read.option(\u0027header\u0027,\u0027true\u0027).csv(\u0027/opt/zeppelin/notebook/test1.csv\u0027)\ndf.show()\n",
+      "user": "anonymous",
+      "dateUpdated": "2021-07-31 18:56:14.724",
+      "progress": 100,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "+------+---+\n|  Name|Age|\n+------+---+\n| Sally| 21|\n|   Joe| 32|\n|Snoopy| 80|\n+------+---+\n\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://949a1e7f1a74:4040/jobs/job?id\u003d5"
+            },
+            {
+              "jobUrl": "http://949a1e7f1a74:4040/jobs/job?id\u003d6"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1627757517841_1665415779",
+      "id": "paragraph_1627757517841_1665415779",
+      "dateCreated": "2021-07-31 18:51:57.841",
+      "dateStarted": "2021-07-31 18:56:14.743",
+      "dateFinished": "2021-07-31 18:56:15.239",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nfrom pyspark import SparkContext\nsc \u003d SparkContext.getOrCreate()\nwords \u003d sc.parallelize (\n   [\"scala\", \n   \"java\", \n   \"hadoop\", \n   \"spark\", \n   \"akka\",\n   \"spark vs hadoop\", \n   \"pyspark\",\n   \"pyspark and spark\"]\n)\ncounts \u003d words.count()\nprint(counts)",
+      "user": "anonymous",
+      "dateUpdated": "2021-07-31 18:56:15.244",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "8\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://949a1e7f1a74:4040/jobs/job?id\u003d7"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1627757535423_72601502",
+      "id": "paragraph_1627757535423_72601502",
+      "dateCreated": "2021-07-31 18:52:15.423",
+      "dateStarted": "2021-07-31 18:56:15.276",
+      "dateFinished": "2021-07-31 18:56:15.626",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nsc \u003d SparkContext.getOrCreate()\nwords \u003d sc.parallelize (\n   [\"scala\", \n   \"java\", \n   \"hadoop\", \n   \"spark\", \n   \"akka\",\n   \"spark vs hadoop\", \n   \"pyspark\",\n   \"pyspark and spark\"]\n)\ncoll \u003d words.collect()\nprint(coll)",
+      "user": "anonymous",
+      "dateUpdated": "2021-07-31 18:56:15.677",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[\u0027scala\u0027, \u0027java\u0027, \u0027hadoop\u0027, \u0027spark\u0027, \u0027akka\u0027, \u0027spark vs hadoop\u0027, \u0027pyspark\u0027, \u0027pyspark and spark\u0027]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://949a1e7f1a74:4040/jobs/job?id\u003d8"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1627757560899_874602521",
+      "id": "paragraph_1627757560899_874602521",
+      "dateCreated": "2021-07-31 18:52:40.899",
+      "dateStarted": "2021-07-31 18:56:15.697",
+      "dateFinished": "2021-07-31 18:56:15.984",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nsc \u003d SparkContext.getOrCreate()\nwords \u003d sc.parallelize (\n   [\"scala\", \n   \"java\", \n   \"hadoop\", \n   \"spark\", \n   \"akka\",\n   \"spark vs hadoop\", \n   \"pyspark\",\n   \"pyspark and spark\"]\n)\nwords_map \u003d words.map(lambda x: (x, 1))\nmapping \u003d words_map.collect()\nprint(mapping)",
+      "user": "anonymous",
+      "dateUpdated": "2021-07-31 18:56:15.997",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "[(\u0027scala\u0027, 1), (\u0027java\u0027, 1), (\u0027hadoop\u0027, 1), (\u0027spark\u0027, 1), (\u0027akka\u0027, 1), (\u0027spark vs hadoop\u0027, 1), (\u0027pyspark\u0027, 1), (\u0027pyspark and spark\u0027, 1)]\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://949a1e7f1a74:4040/jobs/job?id\u003d9"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1627757578339_132387088",
+      "id": "paragraph_1627757578339_132387088",
+      "dateCreated": "2021-07-31 18:52:58.342",
+      "dateStarted": "2021-07-31 18:56:16.013",
+      "dateFinished": "2021-07-31 18:56:16.301",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nsc \u003d SparkContext.getOrCreate()\nwords \u003d sc.parallelize (\n   [\"scala\", \n   \"java\", \n   \"hadoop\", \n   \"spark\", \n   \"akka\",\n   \"spark vs hadoop\", \n   \"pyspark\",\n   \"pyspark and spark\"]\n)\nfrom operator import add\nnums \u003d sc.parallelize([1, 2, 3, 4, 5])\nadding \u003d nums.reduce(add)\nprint(adding)",
+      "user": "anonymous",
+      "dateUpdated": "2021-07-31 18:56:56.708",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "15\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://949a1e7f1a74:4040/jobs/job?id\u003d10"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1627757631448_1459324695",
+      "id": "paragraph_1627757631448_1459324695",
+      "dateCreated": "2021-07-31 18:53:51.448",
+      "dateStarted": "2021-07-31 18:56:56.722",
+      "dateFinished": "2021-07-31 18:56:57.061",
+      "status": "FINISHED"
+    },
+    {
+      "text": "%pyspark\nbig_list \u003d range(1000000000)\nrdd \u003d sc.parallelize(big_list, 2)\nodds \u003d rdd.filter(lambda x: x % 2 !\u003d 0)\nevens \u003d rdd.filter(lambda x: x % 2 \u003d\u003d 0)\nmy_odds \u003d odds.take(5)\nmy_evens \u003d evens.take(5)\nprint(\"Odds\")\nfor p in my_odds:\n    print(p)\nprint(\"Even\")\nfor p in my_evens:\n    print(p)",
+      "user": "anonymous",
+      "dateUpdated": "2021-07-31 18:58:10.722",
+      "progress": 0,
+      "config": {
+        "editorSetting": {
+          "language": "python",
+          "editOnDblClick": false,
+          "completionKey": "TAB",
+          "completionSupport": true
+        },
+        "colWidth": 12.0,
+        "editorMode": "ace/mode/python",
+        "fontSize": 9.0,
+        "results": {},
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "results": {
+        "code": "SUCCESS",
+        "msg": [
+          {
+            "type": "TEXT",
+            "data": "Odds\n1\n3\n5\n7\n9\nEven\n0\n2\n4\n6\n8\n"
+          }
+        ]
+      },
+      "apps": [],
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "SPARK JOB",
+          "tooltip": "View in Spark web UI",
+          "group": "spark",
+          "values": [
+            {
+              "jobUrl": "http://949a1e7f1a74:4040/jobs/job?id\u003d11"
+            },
+            {
+              "jobUrl": "http://949a1e7f1a74:4040/jobs/job?id\u003d12"
+            }
+          ],
+          "interpreterSettingId": "spark"
+        }
+      },
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1627757816720_1414421944",
+      "id": "paragraph_1627757816720_1414421944",
+      "dateCreated": "2021-07-31 18:56:56.720",
+      "dateStarted": "2021-07-31 18:58:10.736",
+      "dateFinished": "2021-07-31 18:58:11.077",
+      "status": "FINISHED"
+    },
+    {
+      "user": "anonymous",
+      "progress": 0,
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "apps": [],
+      "runtimeInfos": {},
+      "progressUpdateIntervalMs": 500,
+      "jobName": "paragraph_1627757846454_1017520939",
+      "id": "paragraph_1627757846454_1017520939",
+      "dateCreated": "2021-07-31 18:57:26.454",
+      "status": "READY"
+    }
+  ],
+  "name": "Untitled Note 1",
+  "id": "2GDKHUVC9",
+  "defaultInterpreterGroup": "spark",
+  "version": "0.9.0",
+  "noteParams": {},
+  "noteForms": {},
+  "angularObjects": {},
+  "config": {
+    "isZeppelinNotebookCronEnable": false
+  },
+  "info": {
+    "isRunning": false
+  }
+}
